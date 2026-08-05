@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -6,5 +7,5 @@ class Token(BaseModel):
     token_type: str = "bearer"
 
 
-class TokenPayload(BaseModel):
-    sub: str | None = None
+class TokenData(BaseModel):
+    user_id: Optional[str] = None
